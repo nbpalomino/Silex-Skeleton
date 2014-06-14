@@ -12,9 +12,9 @@ class CursosController
     	return $app['twig']->render('index.html', $data);
     }
 
-    public function show(Application $app, Request $request, $curso_id)
-    {
-    	$data['title'] = "Cursos";
-    	return $app['twig']->render('index.html', $data);
-    }
+    // public function show(Application $app, Request $request, $curso_id)
+    // {
+    // 	$data['title'] = "Cursos";
+    // 	return $app['twig']->render('index.html', $data);
+    // }
 }

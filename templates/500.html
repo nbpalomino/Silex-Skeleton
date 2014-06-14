@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    Internal server error.
+    <h2>Internal server error.</h2>
+    <h3>
+    	<b>{{ code }}</b>
+    	<p>{{ message }}</p>
+    </h3>
 {% endblock %}

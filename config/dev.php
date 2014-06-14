@@ -13,7 +13,7 @@ $app->register(new MonologServiceProvider(), array(
     'monolog.logfile' => __DIR__.'/../logs/silex_dev.log',
 ));
 
-$app->register($p = new WebProfilerServiceProvider(), array(
+$app->register($profiler = new WebProfilerServiceProvider(), array(
     'profiler.cache_dir' => __DIR__.'/../cache/profiler',
 ));
-$app->mount('/_profiler', $p);
+$app->mount('/_profiler', $profiler);

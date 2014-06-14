@@ -9,10 +9,10 @@ use Quipulabz\Controller\CursosController;
 
 $app->get('/', function () use ($app) {
 
-	$data['title'] = "Portada de estreno";
+	$data['title'] = "Inicio";
     return $app['twig']->render('index.html', $data);
 })
-->bind('homepage');
+->bind('home');
 
 $app->get('/cursos', 'Quipulabz\Controller\CursosController::index')
 ->bind('cursos.index');
@@ -24,5 +24,7 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
     $page = 404 == $code ? '404.html' : '500.html';
 
-    return new Response($app['twig']->render($page, array('code' => $code)), $code);
+    $data['code'] 		= $code;
+    $data['message']	= $e->getMessage();
+    return $app['twig']->render($page, $data);
 });
