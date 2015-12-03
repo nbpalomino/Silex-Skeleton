@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title ? title : 'Home' }} | Quipulabz</title>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Loading Bootstrap -->
+    <link href="{{ asset('/packages/flat-ui/dist/css/vendor/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="{{ asset('/packages/flat-ui/dist/css/flat-ui.css') }}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    {% include "base/navigation.html" %}    
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <!-- /.container -->
+    {% include "base/footer.html" %}
+    <!-- Load JS here for greater good =============================-->
+    <script src="{{ asset('/packages/flat-ui/dist/js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ asset('/packages/flat-ui/dist/js/vendor/video.js') }}"></script>
+    <script src="{{ asset('/packages/flat-ui/dist/js/flat-ui.min.js') }}"></script>
+    
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

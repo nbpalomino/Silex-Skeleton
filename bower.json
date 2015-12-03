@@ -1,0 +1,26 @@
+{
+  "name": "nbpalomino/company",
+  "version": "1.0.1",
+  "authors": [
+    "Nick B. Palomino <nbpalomino@gmail.com>"
+  ],
+  "description": "A silex prototype for building websites.",
+  "keywords": [
+    "silex",
+    "packages"
+  ],
+  "license": "MIT",
+  "homepage": "nbpalomino.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/packages",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flat-ui": "~2.2"
+  }
+}

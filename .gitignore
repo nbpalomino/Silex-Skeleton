@@ -1,0 +1,9 @@
+/vendor/
+*.sublime-*
+/logs/*
+!/logs/.gitignore
+/cache/*
+!/cache/.gitignore
+.c9
+.git
+php.ini
